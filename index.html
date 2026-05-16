@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario del Proyecto Académico</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <div class="contenedor-formulario">
+        <h2>Inicio de Sesión de Pruebas</h2>
+        
+        <form action="/enviar-datos" method="POST">
+            
+            <div class="campo">
+                <label for="usuario">Nombre de Usuario:</label><br>
+                <input type="text" id="usuario" name="username" placeholder="Ingresa tu usuario" required>
+            </div>
+            
+            <br>
+            
+            <div class="campo">
+                <label for="clave">Contraseña:</label><br>
+                <input type="password" id="clave" name="password" placeholder="Ingresa tu contraseña" required>
+            </div>
+            
+            <br>
+            
+            <button type="submit">Ingresar</button>
+            
+        </form>
+    </div>
+
+</body>
+</html>
